@@ -3,9 +3,9 @@
 import sys
 libPath = "PATH"  #your module.py file's directory path
 if not libPath in sys.path : sys.path.append(libPath)
-import testmod
-reload(testmod)
-import testmod
+import moduleCalled
+reload(moduleCalled)
+import moduleCalled
 
 testmod.testclass()
 
