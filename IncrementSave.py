@@ -36,7 +36,7 @@ def FindRelatedFolders(path, name):
 def BackUp(fileName, incName, fromPath, toPath):
     returnVal = True
     errorPath = ""
-    #関連フォルダのコピー
+    #copy related folders
     folderList = FindRelatedFolders(fromPath, fileName)
     for obj in folderList:
         newName = obj.replace(".", "_"+incName+".")
@@ -45,7 +45,7 @@ def BackUp(fileName, incName, fromPath, toPath):
         else:
             returnVal = False
             errorPath = errorPath+"\n"+newName
-    #ファイルのコピー
+    #copy file
     newFileName = fileName.replace(".", "_"+incName+".")
     if not os.path.exists(toPath+"\\"+newFileName):
         shutil.copy(fromPath+"\\"+fileName, toPath+"\\"+newFileName)
@@ -53,7 +53,7 @@ def BackUp(fileName, incName, fromPath, toPath):
         returnVal = False
         errorPath = errorPath+"\n"+newFileName
     if not returnVal:
-        FBMessageBox( "Error", "バックアップが既に存在するため実行できませんでした\n"+errorPath+"\n\nバックアップフォルダを確認してから再実行してください\nもしくは手動での実行をおねがいします\n\n通常のセーブも行われていません", "OK" )
+        FBMessageBox( "Error", "Already exist\n"+errorPath+"\n\nCheck backup folder\nor backup by hand\n\nThere is NOT also normal SAVE", "OK" )
     return returnVal
     
 def SaveFile(lFileName):
