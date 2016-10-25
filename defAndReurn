@@ -1,0 +1,27 @@
+test = []
+def populateFavList(pList):
+    pList.append("test")
+    print pList
+    return pList
+populateFavList(test)
+print test
+
+print "---"
+
+test = ""
+def populateFavList(pList):
+    pList = ["test"]
+    print pList
+    return pList
+populateFavList(test)
+print test
+
+print "---"
+
+test = ""
+def populateFavList(pList):
+    pList = "test"
+    print pList
+    return pList
+populateFavList(test)
+print test
