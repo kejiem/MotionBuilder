@@ -1,27 +1,27 @@
 test = []
-def populateFavList(pList):
+def Test1(pList):
     pList.append("test")
     print pList
     return pList
-populateFavList(test)
+Test1(test)
 print test
 
 print "---"
 
 test = ""
-def populateFavList(pList):
+def Test2(pList):
     pList = ["test"]
     print pList
     return pList
-populateFavList(test)
+Test2(test)
 print test
 
 print "---"
 
 test = ""
-def populateFavList(pList):
+def Test3(pList):
     pList = "test"
     print pList
     return pList
-populateFavList(test)
+Test3(test)
 print test
